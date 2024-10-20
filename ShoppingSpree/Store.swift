@@ -13,15 +13,17 @@ class Store {
     var description: String
     var location: String
     var hours: String
-    var locationOnMap: String
+    var phonenumber: String
+    var mallEntrance: String
     
-    init(name: String, category: String, description: String, location: String, hours: String, locationOnMap: String) {
+    init(name: String, category: String, description: String, location: String, hours: String, phonenumber: String, mallEntrance: String) {
         self.name = name
         self.category = category
         self.description = description
         self.location = location
         self.hours = hours
-        self.locationOnMap = locationOnMap
+        self.phonenumber = phonenumber
+        self.mallEntrance = mallEntrance
     }
     
 }
