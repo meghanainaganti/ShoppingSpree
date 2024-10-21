@@ -11,57 +11,89 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        addStores()
-        fetchAndPrintStores()
-//          clearStoreList()
+//        clearAllStores()
+//        importCSVDataToCoreData()
+        // fetchAndPrintStores()
         return true
     }
-    
-    func addStores() {
-        let context = persistentContainer.viewContext
-        let store1 = StoreModel(context: context)
-            store1.name = "Abercrombie & Fitch"
-            store1.storetype = "Clothing"
-            store1.location = "Lower Level Dillard's Wing next to Shoe Palace"
-            store1.hours = "Monday to Thursday 11AM - 8PM \nFriday to Saturday 10AM - 9PM \nSunday 12PM - 6PM"
-            store1.phonenumber = "(512) 329-8323"
-            store1.image = "https://cdn-fsly.yottaa.net/555a305b2bb0ac71b9002d22/4a6e24e07e33013b5e040ead9ecbf798.yottaa.net/v~4b.32f.0.0/tenantlogos/94.png?yocs=D_NA_"
-        do {
-            try context.save()
-        } catch {
-            print("Failed to add stores: \(error)")
+
+    func readCSV(fileName: String) -> [[String]]? {
+        if let filePath = Bundle.main.path(forResource: fileName, ofType: "csv") {
+            do {
+                let content = try String(contentsOfFile: filePath)
+                let lines = content.components(separatedBy: "\n")
+                
+                // Process each line and replace "***" with newline character
+                let csvData = lines.map { line in
+                    line.components(separatedBy: ",").map { field in
+                        field.replacingOccurrences(of: "***", with: "\n")
+                    }
+                }
+                
+                return csvData
+            } catch {
+                print("Error reading CSV file: \(error)")
+            }
+        } else {
+            print("File not found")
         }
-        
+        return nil
+    }
+    
+    func importCSVDataToCoreData() {
+        if let csvData = readCSV(fileName: "malldata") {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            for row in csvData.dropFirst() {
+                if row.count == 8 {
+                    let store = StoreModel(context: context)
+                    store.name = row[0]
+                    store.hours = row[1]
+                    store.website = row[2]
+                    store.storetype = row[3]
+                    store.location = row[4]
+                    store.phonenumber = row[5]
+                    store.image = row[6]
+                    store.mapurl = row[7]
+                    
+                }
+            }
+            
+            print(csvData.count)
+            
+            do {
+                try context.save()
+                print("Stores imported successfully!")
+            } catch {
+                print("Failed to save stores to Core Data: \(error)")
+            }
+        } else {
+            print("No data found in CSV")
+        }
     }
     
     func fetchAndPrintStores() {
-        // Get the Core Data context
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-        // Create a fetch request for the Store entity
+        
         let fetchRequest: NSFetchRequest<StoreModel> = StoreModel.fetchRequest()
-
+        
         do {
-            // Perform the fetch request
             let stores = try context.fetch(fetchRequest)
             
-            // Check if there are any stores
             if stores.isEmpty {
-                print("No stores found.")
+                print("No stores found in Core Data.")
             } else {
-                // Loop through the fetched stores and print their properties
                 for store in stores {
-                    print("Store Name: \(store.name ?? "No Name")")
-                    print("Category: \(store.storetype ?? "No Type")")
-                    print("Description: \(store.phonenumber ?? "No phonenumber")")
-                    print("Location: \(store.location ?? "No Location")")
-                    print("Hours: \(store.hours ?? "No Hours")")
-                    print("Image: \(store.image ?? "No image")")
-                    print("----------------------------------")
+                    print("Store Name: \(store.name ?? "Unknown")")
+                    print("Hours: \(store.hours ?? "Unknown")")
+                    print("Store Type: \(store.storetype ?? "No description available")")
+                    print("Website: \(store.website ?? "Unknown")")
+                    print("Location: \(store.location ?? "Unknown")")
+                    print("Number: \(store.phonenumber ?? "No hours available")")
+                    print("Img: \(store.image ?? "Unknown")")
+                    print("-----------------------------")
                 }
             }
         } catch {
@@ -69,30 +101,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func clearStoreList() {
-        // Get the Core Data context
+    func clearAllStores() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-        // Create a fetch request for the Store entity
         let fetchRequest: NSFetchRequest<StoreModel> = StoreModel.fetchRequest()
-
+        
         do {
-            // Perform the fetch request
             let stores = try context.fetch(fetchRequest)
-
-            // Loop through and delete each store
+            
             for store in stores {
                 context.delete(store)
             }
-
-            // Save the context to persist the changes
+            
             try context.save()
-            print("All stores deleted successfully!")
+            print("All stores deleted successfully.")
+            
         } catch {
-            print("Failed to delete stores: \(error)")
+            print("Failed to delete stores: \(error.localizedDescription)")
         }
     }
-    
 
     // MARK: UISceneSession Lifecycle
 

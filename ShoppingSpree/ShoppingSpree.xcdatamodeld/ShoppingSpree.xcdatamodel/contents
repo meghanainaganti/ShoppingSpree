@@ -4,8 +4,10 @@
         <attribute name="hours" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="mapurl" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="phonenumber" optional="YES" attributeType="String"/>
         <attribute name="storetype" optional="YES" attributeType="String"/>
+        <attribute name="website" optional="YES" attributeType="String"/>
     </entity>
 </model>
