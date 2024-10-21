@@ -11,13 +11,115 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        clearAllStores()
+//        importCSVDataToCoreData()
+        // fetchAndPrintStores()
         return true
     }
+
+    func readCSV(fileName: String) -> [[String]]? {
+        if let filePath = Bundle.main.path(forResource: fileName, ofType: "csv") {
+            do {
+                let content = try String(contentsOfFile: filePath)
+                let lines = content.components(separatedBy: "\n")
+                
+                // Process each line and replace "***" with newline character
+                let csvData = lines.map { line in
+                    line.components(separatedBy: ",").map { field in
+                        field.replacingOccurrences(of: "***", with: "\n")
+                    }
+                }
+                
+                return csvData
+            } catch {
+                print("Error reading CSV file: \(error)")
+            }
+        } else {
+            print("File not found")
+        }
+        return nil
+    }
     
+    func importCSVDataToCoreData() {
+        if let csvData = readCSV(fileName: "malldata") {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            for row in csvData.dropFirst() {
+                if row.count == 8 {
+                    let store = StoreModel(context: context)
+                    store.name = row[0]
+                    store.hours = row[1]
+                    store.website = row[2]
+                    store.storetype = row[3]
+                    store.location = row[4]
+                    store.phonenumber = row[5]
+                    store.image = row[6]
+                    store.mapurl = row[7]
+                    
+                }
+            }
+            
+            print(csvData.count)
+            
+            do {
+                try context.save()
+                print("Stores imported successfully!")
+            } catch {
+                print("Failed to save stores to Core Data: \(error)")
+            }
+        } else {
+            print("No data found in CSV")
+        }
+    }
+    
+    func fetchAndPrintStores() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let fetchRequest: NSFetchRequest<StoreModel> = StoreModel.fetchRequest()
+        
+        do {
+            let stores = try context.fetch(fetchRequest)
+            
+            if stores.isEmpty {
+                print("No stores found in Core Data.")
+            } else {
+                for store in stores {
+                    print("Store Name: \(store.name ?? "Unknown")")
+                    print("Hours: \(store.hours ?? "Unknown")")
+                    print("Store Type: \(store.storetype ?? "No description available")")
+                    print("Website: \(store.website ?? "Unknown")")
+                    print("Location: \(store.location ?? "Unknown")")
+                    print("Number: \(store.phonenumber ?? "No hours available")")
+                    print("Img: \(store.image ?? "Unknown")")
+                    print("-----------------------------")
+                }
+            }
+        } catch {
+            print("Failed to fetch stores: \(error)")
+        }
+    }
+    
+    func clearAllStores() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+        let fetchRequest: NSFetchRequest<StoreModel> = StoreModel.fetchRequest()
+        
+        do {
+            let stores = try context.fetch(fetchRequest)
+            
+            for store in stores {
+                context.delete(store)
+            }
+            
+            try context.save()
+            print("All stores deleted successfully.")
+            
+        } catch {
+            print("Failed to delete stores: \(error.localizedDescription)")
+        }
+    }
 
     // MARK: UISceneSession Lifecycle
 
