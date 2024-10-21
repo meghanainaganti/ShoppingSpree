@@ -15,7 +15,82 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        addStores()
+        fetchAndPrintStores()
+//          clearStoreList()
         return true
+    }
+    
+    func addStores() {
+        let context = persistentContainer.viewContext
+        let store1 = StoreModel(context: context)
+            store1.name = "Abercrombie & Fitch"
+            store1.storetype = "Clothing"
+            store1.location = "Lower Level Dillard's Wing next to Shoe Palace"
+            store1.hours = "Monday to Thursday 11AM - 8PM \nFriday to Saturday 10AM - 9PM \nSunday 12PM - 6PM"
+            store1.phonenumber = "(512) 329-8323"
+            store1.image = "https://cdn-fsly.yottaa.net/555a305b2bb0ac71b9002d22/4a6e24e07e33013b5e040ead9ecbf798.yottaa.net/v~4b.32f.0.0/tenantlogos/94.png?yocs=D_NA_"
+        do {
+            try context.save()
+        } catch {
+            print("Failed to add stores: \(error)")
+        }
+        
+    }
+    
+    func fetchAndPrintStores() {
+        // Get the Core Data context
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+        // Create a fetch request for the Store entity
+        let fetchRequest: NSFetchRequest<StoreModel> = StoreModel.fetchRequest()
+
+        do {
+            // Perform the fetch request
+            let stores = try context.fetch(fetchRequest)
+            
+            // Check if there are any stores
+            if stores.isEmpty {
+                print("No stores found.")
+            } else {
+                // Loop through the fetched stores and print their properties
+                for store in stores {
+                    print("Store Name: \(store.name ?? "No Name")")
+                    print("Category: \(store.storetype ?? "No Type")")
+                    print("Description: \(store.phonenumber ?? "No phonenumber")")
+                    print("Location: \(store.location ?? "No Location")")
+                    print("Hours: \(store.hours ?? "No Hours")")
+                    print("Image: \(store.image ?? "No image")")
+                    print("----------------------------------")
+                }
+            }
+        } catch {
+            print("Failed to fetch stores: \(error)")
+        }
+    }
+    
+    func clearStoreList() {
+        // Get the Core Data context
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+        // Create a fetch request for the Store entity
+        let fetchRequest: NSFetchRequest<StoreModel> = StoreModel.fetchRequest()
+
+        do {
+            // Perform the fetch request
+            let stores = try context.fetch(fetchRequest)
+
+            // Loop through and delete each store
+            for store in stores {
+                context.delete(store)
+            }
+
+            // Save the context to persist the changes
+            try context.save()
+            print("All stores deleted successfully!")
+        } catch {
+            print("Failed to delete stores: \(error)")
+        }
     }
     
 
