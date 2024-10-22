@@ -13,6 +13,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    @IBAction func bookmarkButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToBookmarkedStores", sender: self)
+    }
+    
+    @IBAction func bookmarkTapped(_ sender: UITapGestureRecognizer) {
+        // Trigger the segue to go to BookmarkedStoresViewController
+        performSegue(withIdentifier: "goToBookmarkedStores", sender: self)
+    }
+
+
 
 
 }
