@@ -100,21 +100,6 @@
                                     <barButtonItem title="Item" image="gearshape" catalog="system" id="766-NZ-yTf"/>
                                 </items>
                             </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TYo-uN-0FC">
-                                <rect key="frame" x="0.0" y="404" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Item" image="mappin.and.ellipse" catalog="system" id="Zm7-a7-1ot"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xRJ-nj-On1"/>
-                                    <barButtonItem title="Item" image="storefront" catalog="system" id="qx9-8c-McM"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="TnW-qy-pXH"/>
-                                    <barButtonItem title="Item" image="bookmark" catalog="system" id="ekr-IB-zN8"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="z65-3N-UL5"/>
-                                    <barButtonItem title="Item" image="bubble.left.and.text.bubble.right" catalog="system" id="WSp-lX-Yle"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YZC-xk-YpK"/>
-                                    <barButtonItem title="Item" image="gearshape" catalog="system" id="Bzz-2w-c3a"/>
-                                </items>
-                            </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smG-C3-UIG">
                                 <rect key="frame" x="102" y="248" width="86" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
