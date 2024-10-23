@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9CC2ED762CC76AD000D5E703 /* malldata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2ED752CC76AD000D5E703 /* malldata.csv */; };
-		9CC2ED8E2CC7746D00D5E703 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2ED8D2CC7746D00D5E703 /* MapVC.swift */; };
 		AC652BEC2CC0ACD7004A7F40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652BEB2CC0ACD7004A7F40 /* AppDelegate.swift */; };
 		AC652BEE2CC0ACD7004A7F40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652BED2CC0ACD7004A7F40 /* SceneDelegate.swift */; };
 		AC652BF02CC0ACD7004A7F40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652BEF2CC0ACD7004A7F40 /* ViewController.swift */; };
@@ -35,7 +34,6 @@
 
 /* Begin PBXFileReference section */
 		9CC2ED752CC76AD000D5E703 /* malldata.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = malldata.csv; sourceTree = "<group>"; };
-		9CC2ED8D2CC7746D00D5E703 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		AC652BE82CC0ACD7004A7F40 /* ShoppingSpree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingSpree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC652BEB2CC0ACD7004A7F40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC652BED2CC0ACD7004A7F40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 				AC652BF92CC0ACD8004A7F40 /* LaunchScreen.storyboard */,
 				AC652BFC2CC0ACD8004A7F40 /* Info.plist */,
 				AC652BF42CC0ACD7004A7F40 /* ShoppingSpree.xcdatamodeld */,
-				9CC2ED8D2CC7746D00D5E703 /* MapVC.swift */,
 			);
 			path = ShoppingSpree;
 			sourceTree = "<group>";
@@ -172,7 +169,6 @@
 				AC652BF62CC0ACD7004A7F40 /* ShoppingSpree.xcdatamodeld in Sources */,
 				AC652BEC2CC0ACD7004A7F40 /* AppDelegate.swift in Sources */,
 				ACAE3F822CC6FAA00092062D /* DirectoryCell.swift in Sources */,
-				9CC2ED8E2CC7746D00D5E703 /* MapVC.swift in Sources */,
 				AC652BEE2CC0ACD7004A7F40 /* SceneDelegate.swift in Sources */,
 				ACAE3F7A2CC578650092062D /* StoreDirectory.swift in Sources */,
 			);
