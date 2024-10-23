@@ -56,19 +56,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TYo-uN-0FC">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dga-zE-Wug">
                                 <rect key="frame" x="0.0" y="772" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" image="mappin.and.ellipse" catalog="system" id="Zm7-a7-1ot"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xRJ-nj-On1"/>
-                                    <barButtonItem title="Item" image="storefront" catalog="system" id="qx9-8c-McM"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="TnW-qy-pXH"/>
-                                    <barButtonItem title="Item" image="bookmark" catalog="system" id="ekr-IB-zN8"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="z65-3N-UL5"/>
-                                    <barButtonItem title="Item" image="bubble.left.and.text.bubble.right" catalog="system" id="WSp-lX-Yle"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YZC-xk-YpK"/>
-                                    <barButtonItem title="Item" image="gearshape" catalog="system" id="Bzz-2w-c3a"/>
+                                    <barButtonItem title="Item" image="mappin.and.ellipse" catalog="system" id="TS0-nK-qu3">
+                                        <connections>
+                                            <segue destination="DpQ-qm-06E" kind="show" id="t8A-OS-i7q"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="g7Z-5x-cnS"/>
+                                    <barButtonItem title="Item" image="storefront" catalog="system" id="rzb-By-xTs"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="VSu-C4-bzo"/>
+                                    <barButtonItem title="Item" image="bookmark" catalog="system" id="AxD-VY-K4G"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8j5-xr-tuv"/>
+                                    <barButtonItem title="Item" image="bubble.left.and.text.bubble.right" catalog="system" id="4qs-3K-LHJ"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wfe-HI-kFV"/>
+                                    <barButtonItem title="Item" image="gearshape" catalog="system" id="lKn-PL-Bhm"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -82,14 +86,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1n-i2-qEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3540" y="-615"/>
+            <point key="canvasLocation" x="3666" y="-754"/>
         </scene>
         <!--MapVC-->
         <scene sceneID="1ty-dX-9GZ">
             <objects>
                 <viewController title="MapVC" id="DpQ-qm-06E" customClass="MapVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mVG-0l-L4X">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lowerfloor" translatesAutoresizingMaskIntoConstraints="NO" id="ROh-wd-ejt">
@@ -97,7 +101,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VFO-ZL-KT5">
-                                <rect key="frame" x="0.0" y="774" width="393" height="44"/>
+                                <rect key="frame" x="0.0" y="764" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Item" image="mappin.and.ellipse" catalog="system" id="EYu-hy-85l"/>
@@ -172,7 +176,7 @@
             <objects>
                 <viewController id="DkO-DZ-IwG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lai-K1-4kN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="upperfloor" translatesAutoresizingMaskIntoConstraints="NO" id="X21-gn-eW5">
@@ -180,7 +184,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PMn-el-sNl">
-                                <rect key="frame" x="0.0" y="774" width="393" height="44"/>
+                                <rect key="frame" x="0.0" y="764" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Item" image="mappin.and.ellipse" catalog="system" id="cdv-2U-ITy">
@@ -290,7 +294,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="AfO-TM-qAd"/>
-        <segue reference="dpk-Jg-XZg"/>
+        <segue reference="t8A-OS-i7q"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bookmark" catalog="system" width="110" height="128"/>
