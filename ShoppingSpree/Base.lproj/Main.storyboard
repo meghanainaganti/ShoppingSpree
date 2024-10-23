@@ -298,7 +298,7 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Upper Level &gt;">
-                                            <color key="titleColor" red="0.63217538595199585" green="0.85322350263595581" blue="0.90975290536880493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <segue destination="DkO-DZ-IwG" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="11P-rH-hKD"/>
@@ -434,7 +434,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="&lt; Lower Level">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
-                                            <color key="baseForegroundColor" red="0.67843137254901964" green="0.84705882352941175" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="DpQ-qm-06E" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="o7e-cg-tn7"/>
@@ -463,9 +463,9 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Hb2-pd-a83"/>
-        <segue reference="ZEB-FD-gFY"/>
-        <segue reference="qfD-bi-LXf"/>
-        <segue reference="gIV-4V-SYK"/>
+        <segue reference="ymr-lv-0zR"/>
+        <segue reference="N0Z-Bs-p4V"/>
+        <segue reference="p0U-ak-6lV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bookmark" catalog="system" width="110" height="128"/>
