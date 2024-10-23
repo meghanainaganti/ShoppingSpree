@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CC2ED762CC76AD000D5E703 /* malldata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2ED752CC76AD000D5E703 /* malldata.csv */; };
+		9CC2ED8E2CC7746D00D5E703 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2ED8D2CC7746D00D5E703 /* MapVC.swift */; };
 		AC652BEC2CC0ACD7004A7F40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652BEB2CC0ACD7004A7F40 /* AppDelegate.swift */; };
 		AC652BEE2CC0ACD7004A7F40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652BED2CC0ACD7004A7F40 /* SceneDelegate.swift */; };
 		AC652BF02CC0ACD7004A7F40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652BEF2CC0ACD7004A7F40 /* ViewController.swift */; };
@@ -16,10 +18,24 @@
 		AC652BFB2CC0ACD8004A7F40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC652BF92CC0ACD8004A7F40 /* LaunchScreen.storyboard */; };
 		ACAE3F7A2CC578650092062D /* StoreDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE3F792CC578650092062D /* StoreDirectory.swift */; };
 		ACAE3F822CC6FAA00092062D /* DirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE3F812CC6FAA00092062D /* DirectoryCell.swift */; };
-		ACAE3F8C2CC70FE70092062D /* malldata.csv in Resources */ = {isa = PBXBuildFile; fileRef = ACAE3F8B2CC70FE70092062D /* malldata.csv */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9CC2ED862CC7738A00D5E703 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9CC2ED752CC76AD000D5E703 /* malldata.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = malldata.csv; sourceTree = "<group>"; };
+		9CC2ED8D2CC7746D00D5E703 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		AC652BE82CC0ACD7004A7F40 /* ShoppingSpree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingSpree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC652BEB2CC0ACD7004A7F40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC652BED2CC0ACD7004A7F40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +47,6 @@
 		AC652BFC2CC0ACD8004A7F40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACAE3F792CC578650092062D /* StoreDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDirectory.swift; sourceTree = "<group>"; };
 		ACAE3F812CC6FAA00092062D /* DirectoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryCell.swift; sourceTree = "<group>"; };
-		ACAE3F8B2CC70FE70092062D /* malldata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = malldata.csv; path = ../../malldata.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +79,7 @@
 		AC652BEA2CC0ACD7004A7F40 /* ShoppingSpree */ = {
 			isa = PBXGroup;
 			children = (
+				9CC2ED752CC76AD000D5E703 /* malldata.csv */,
 				ACAE3F812CC6FAA00092062D /* DirectoryCell.swift */,
 				AC652BEB2CC0ACD7004A7F40 /* AppDelegate.swift */,
 				AC652BED2CC0ACD7004A7F40 /* SceneDelegate.swift */,
@@ -74,7 +90,7 @@
 				AC652BF92CC0ACD8004A7F40 /* LaunchScreen.storyboard */,
 				AC652BFC2CC0ACD8004A7F40 /* Info.plist */,
 				AC652BF42CC0ACD7004A7F40 /* ShoppingSpree.xcdatamodeld */,
-				ACAE3F8B2CC70FE70092062D /* malldata.csv */,
+				9CC2ED8D2CC7746D00D5E703 /* MapVC.swift */,
 			);
 			path = ShoppingSpree;
 			sourceTree = "<group>";
@@ -89,6 +105,7 @@
 				AC652BE42CC0ACD7004A7F40 /* Sources */,
 				AC652BE52CC0ACD7004A7F40 /* Frameworks */,
 				AC652BE62CC0ACD7004A7F40 /* Resources */,
+				9CC2ED862CC7738A00D5E703 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,9 +154,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC2ED762CC76AD000D5E703 /* malldata.csv in Resources */,
 				AC652BFB2CC0ACD8004A7F40 /* LaunchScreen.storyboard in Resources */,
 				AC652BF82CC0ACD8004A7F40 /* Assets.xcassets in Resources */,
-				ACAE3F8C2CC70FE70092062D /* malldata.csv in Resources */,
 				AC652BF32CC0ACD7004A7F40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +172,7 @@
 				AC652BF62CC0ACD7004A7F40 /* ShoppingSpree.xcdatamodeld in Sources */,
 				AC652BEC2CC0ACD7004A7F40 /* AppDelegate.swift in Sources */,
 				ACAE3F822CC6FAA00092062D /* DirectoryCell.swift in Sources */,
+				9CC2ED8E2CC7746D00D5E703 /* MapVC.swift in Sources */,
 				AC652BEE2CC0ACD7004A7F40 /* SceneDelegate.swift in Sources */,
 				ACAE3F7A2CC578650092062D /* StoreDirectory.swift in Sources */,
 			);
