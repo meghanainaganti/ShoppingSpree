@@ -20,6 +20,7 @@
                                 <rect key="frame" x="0.0" y="103" width="407" height="669"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.62745098040000002" green="0.74901960779999999" blue="0.69411764710000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DirectoryCell" rowHeight="85" id="JCS-UI-vzN" customClass="DirectoryCell" customModule="ShoppingSpree" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="407" height="85"/>
@@ -29,18 +30,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UgK-Rc-Jk0">
-                                                    <rect key="frame" x="20" y="0.0" width="112" height="49"/>
+                                                    <rect key="frame" x="20" y="0.0" width="111" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Abercrombie &amp; Fitch" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS0-9w-G4E">
-                                                    <rect key="frame" x="155" y="16" width="232" height="17"/>
+                                                    <rect key="frame" x="155" y="2" width="232" height="38"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.62745098040000002" green="0.74901960779999999" blue="0.69411764710000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.62745098040000002" green="0.74901960779999999" blue="0.69411764710000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="storeImage" destination="UgK-Rc-Jk0" id="uyk-N3-n8e"/>
                                             <outlet property="storeName" destination="NS0-9w-G4E" id="Yxu-Cb-PUW"/>
@@ -48,6 +51,11 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.62745098039215685" green="0.74901960784313726" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Store Directory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWE-ZK-NGP">
                                 <rect key="frame" x="7" y="56" width="393" height="39"/>
@@ -61,27 +69,37 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Item" image="mappin.and.ellipse" catalog="system" id="4ey-fz-mL2">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="DpQ-qm-06E" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="fEN-zW-UaO"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="xSQ-88-v0P"/>
-                                    <barButtonItem title="Item" image="storefront" catalog="system" id="m5g-cV-SLj"/>
+                                    <barButtonItem title="Item" image="storefront" catalog="system" id="m5g-cV-SLj">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="qLv-I8-qoc"/>
                                     <barButtonItem title="Item" image="bookmark" catalog="system" id="5Nh-jW-nOH">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="pTQ-7D-197" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="4IF-mu-Mdp"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="P4E-GD-b6b"/>
-                                    <barButtonItem title="Item" image="bubble.left.and.text.bubble.right" catalog="system" id="zd2-9c-fMb"/>
+                                    <barButtonItem title="Item" image="bubble.left.and.text.bubble.right" catalog="system" id="zd2-9c-fMb">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="oTM-N3-Ycf"/>
-                                    <barButtonItem title="Item" image="gearshape" catalog="system" id="tmc-J6-jD4"/>
+                                    <barButtonItem title="Item" image="gearshape" catalog="system" id="tmc-J6-jD4">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.67843137249999996" green="0.84705882349999995" blue="0.90196078430000004" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CBI-pn-vQs"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.75885027647018433" green="0.89023500680923462" blue="0.93950533866882324" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="systemGray6Color"/>
                     </view>
                     <navigationItem key="navigationItem" id="q27-0e-5Vw"/>
                     <connections>
@@ -90,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1n-i2-qEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3782" y="-650"/>
+            <point key="canvasLocation" x="3780.9160305343512" y="-650"/>
         </scene>
         <!--Bookmarked Stores View Controller-->
         <scene sceneID="iPJ-fG-KxU">
@@ -101,9 +119,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rqn-ee-lMe">
-                                <rect key="frame" x="0.0" y="138" width="393" height="637"/>
+                                <rect key="frame" x="0.0" y="101" width="393" height="674"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.62745098040000002" green="0.74901960779999999" blue="0.69411764710000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BookmarkCell" id="6rZ-v6-go3">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -111,43 +130,61 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6rZ-v6-go3" id="pdP-uk-pZw">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" red="0.62745098040000002" green="0.74901960779999999" blue="0.69411764710000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="tintColor" red="0.62745098040000002" green="0.74901960779999999" blue="0.69411764710000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.62745098039215685" green="0.74901960784313726" blue="0.69411764705882351" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.62745098040000002" green="0.74901960779999999" blue="0.69411764710000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bookmarked Stores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1O-d4-zVx">
-                                <rect key="frame" x="121" y="86" width="150" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pUG-Wr-TC5">
                                 <rect key="frame" x="0.0" y="775" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Item" image="mappin.and.ellipse" catalog="system" id="qLt-rW-zIA">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="DpQ-qm-06E" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="ZEB-FD-gFY"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="8q3-61-BAA"/>
                                     <barButtonItem title="Item" image="storefront" catalog="system" id="hyT-gw-Kp4">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="G6L-F1-YvE" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="a3e-RI-z2Y"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="FMZ-gG-Pq4"/>
-                                    <barButtonItem title="Item" image="bookmark" catalog="system" id="pK9-Wg-GAR"/>
+                                    <barButtonItem title="Item" image="bookmark" catalog="system" id="pK9-Wg-GAR">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mIV-Ma-5xB"/>
-                                    <barButtonItem title="Item" image="bubble.left.and.text.bubble.right" catalog="system" id="Ffr-vG-dOz"/>
+                                    <barButtonItem title="Item" image="bubble.left.and.text.bubble.right" catalog="system" id="Ffr-vG-dOz">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Lj3-UP-1GE"/>
-                                    <barButtonItem title="Item" image="gearshape" catalog="system" id="RmH-yf-41g"/>
+                                    <barButtonItem title="Item" image="gearshape" catalog="system" id="RmH-yf-41g">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.67843137249999996" green="0.84705882349999995" blue="0.90196078430000004" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bookmarked Stores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1O-d4-zVx">
+                                <rect key="frame" x="121" y="65" width="150" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mbI-Ho-0Mq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.75885027647018433" green="0.89023500680923462" blue="0.93950533866882324" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="JJz-0f-Pa1"/>
                     <connections>
@@ -156,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bys-f3-YpI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4896.9465648854957" y="-663.38028169014092"/>
+            <point key="canvasLocation" x="4893.8931297709923" y="-650"/>
         </scene>
         <!--MapVC-->
         <scene sceneID="1ty-dX-9GZ">
@@ -170,24 +207,33 @@
                                 <rect key="frame" x="0.0" y="774" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" image="mappin.and.ellipse" catalog="system" id="EYu-hy-85l"/>
+                                    <barButtonItem title="Item" image="mappin.and.ellipse" catalog="system" id="EYu-hy-85l">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="u7a-4g-ero"/>
                                     <barButtonItem title="Item" image="storefront" catalog="system" id="vFh-Mn-c6a">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="G6L-F1-YvE" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="gIV-4V-SYK"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ygD-kd-Hbh"/>
                                     <barButtonItem title="Item" image="bookmark" catalog="system" id="5An-Ke-fYP">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="pTQ-7D-197" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="qfD-bi-LXf"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="lMU-kf-5uT"/>
-                                    <barButtonItem title="Item" image="bubble.left.and.text.bubble.right" catalog="system" id="hE8-In-stO"/>
+                                    <barButtonItem title="Item" image="bubble.left.and.text.bubble.right" catalog="system" id="hE8-In-stO">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="qLz-YG-q2Q"/>
-                                    <barButtonItem title="Item" image="gearshape" catalog="system" id="766-NZ-yTf"/>
+                                    <barButtonItem title="Item" image="gearshape" catalog="system" id="766-NZ-yTf">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.67843137254901964" green="0.84705882352941175" blue="0.90196078431372551" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0T-x6-1a1">
                                 <rect key="frame" x="25" y="53" width="352" height="711"/>
@@ -196,58 +242,74 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lowerfloor" translatesAutoresizingMaskIntoConstraints="NO" id="ROh-wd-ejt">
                                         <rect key="frame" x="-2" y="63" width="357" height="640"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smG-C3-UIG">
                                         <rect key="frame" x="86" y="196" width="86" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Dillard's"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Dillard's">
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zy4-5M-Dse">
                                         <rect key="frame" x="15" y="397" width="79" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Macy's"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Macy's">
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAx-7k-CEP">
                                         <rect key="frame" x="166" y="283" width="74" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="JC- Penny"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="JC- Penny">
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5C-MB-32B">
                                         <rect key="frame" x="270" y="386" width="67" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Sears"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sears">
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKf-ML-WoG">
                                         <rect key="frame" x="76" y="549" width="106" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Nordstrom"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Nordstrom">
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdZ-Nt-HNO">
                                         <rect key="frame" x="32" y="283" width="62" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Dill- ard's"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Dill- ard's">
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8S-Za-JSJ">
-                                        <rect key="frame" x="235" y="20" width="130" height="35"/>
+                                        <rect key="frame" x="222" y="20" width="130" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Upper Level &gt;"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Upper Level &gt;">
+                                            <color key="baseForegroundColor" red="0.71918153762817383" green="0.93484193086624146" blue="0.93184304237365723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="DkO-DZ-IwG" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="11P-rH-hKD"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ai1-yC-nC0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.62745098040000002" green="0.74901960779999999" blue="0.69411764710000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lower level" id="y6M-nw-iia">
                         <barButtonItem key="rightBarButtonItem" title="Upper level &gt;" id="XyO-o3-Pho">
@@ -277,87 +339,113 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Item" image="mappin.and.ellipse" catalog="system" id="cdv-2U-ITy">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="DpQ-qm-06E" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="ymr-lv-0zR"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="24i-Ur-dIV"/>
                                     <barButtonItem title="Item" image="storefront" catalog="system" id="76Z-jc-ckt">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="G6L-F1-YvE" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="p0U-ak-6lV"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3Ti-LX-ggR"/>
                                     <barButtonItem title="Item" image="bookmark" catalog="system" id="6Dd-eY-qex">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="pTQ-7D-197" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="N0Z-Bs-p4V"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="S4d-t9-SxK"/>
-                                    <barButtonItem title="Item" image="bubble.left.and.text.bubble.right" catalog="system" id="sLg-VI-Mqa"/>
+                                    <barButtonItem title="Item" image="bubble.left.and.text.bubble.right" catalog="system" id="sLg-VI-Mqa">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="38v-fc-Tol"/>
-                                    <barButtonItem title="Item" image="gearshape" catalog="system" id="HAN-j3-WJJ"/>
+                                    <barButtonItem title="Item" image="gearshape" catalog="system" id="HAN-j3-WJJ">
+                                        <color key="tintColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.67843137249999996" green="0.84705882349999995" blue="0.90196078430000004" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6WA-Qh-gse">
                                 <rect key="frame" x="16" y="69" width="361" height="705"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="upperfloor" translatesAutoresizingMaskIntoConstraints="NO" id="X21-gn-eW5">
-                                        <rect key="frame" x="0.0" y="-27" width="361" height="759"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="705"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGT-Ee-Zyg">
                                         <rect key="frame" x="174" y="253" width="74" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="JC- Penny"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="JC- Penny">
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4R-zT-ffv">
                                         <rect key="frame" x="37" y="253" width="62" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Dill- ard's"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Dill- ard's">
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDR-G4-VWt">
                                         <rect key="frame" x="286" y="358" width="67" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Sears"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sears">
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dl-Qf-F9f">
                                         <rect key="frame" x="79" y="534" width="106" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Nordstrom"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Nordstrom">
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hz3-Of-X6l">
                                         <rect key="frame" x="8" y="375" width="79" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Macy's"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Macy's">
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9l-vw-u3Y">
                                         <rect key="frame" x="79" y="159" width="86" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Dillard's"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Dillard's">
+                                            <color key="baseForegroundColor" red="0.0039215686269999999" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCM-i6-n3E">
-                                        <rect key="frame" x="0.0" y="-15" width="129" height="35"/>
+                                        <rect key="frame" x="4" y="-10" width="129" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="&lt; Lower Level"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="&lt; Lower Level">
+                                            <color key="baseForegroundColor" red="0.67843137254901964" green="0.84705882352941175" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="DpQ-qm-06E" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="o7e-cg-tn7"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mSj-E2-Pw4"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.62745098040000002" green="0.74901960779999999" blue="0.69411764710000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Upper level" id="w1G-Qf-nk4">
                         <barButtonItem key="backBarButtonItem" id="hQt-Jq-WWd"/>
@@ -368,7 +456,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ili-JZ-7M5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4450" y="99"/>
+            <point key="canvasLocation" x="4449.6183206106871" y="98.591549295774655"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -387,6 +475,9 @@
         <image name="upperfloor" width="750" height="1334"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

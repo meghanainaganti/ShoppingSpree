@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         clearAllStores()
         importCSVDataToCoreData()
-         fetchAndPrintStores()
+//         fetchAndPrintStores()
         return true
     }
 

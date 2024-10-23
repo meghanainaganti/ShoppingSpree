@@ -52,11 +52,9 @@ class BookmarkedStoresViewController: UIViewController, UITableViewDelegate, UIT
 
         return cell
     }
-
-    // MARK: - UITableView Delegate Methods (Optional)
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedStore = bookmarkedStores[indexPath.row]
-        print("Selected store: \(selectedStore.name)")
+        tableView.deselectRow(at: indexPath, animated: true)
     }
+
 }
