@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9C6566CB2CC979EA0070AEB2 /* LowerLevelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6566CA2CC979EA0070AEB2 /* LowerLevelVC.swift */; };
 		9C6566D12CC97C1D0070AEB2 /* UpperLevelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6566D02CC97C1D0070AEB2 /* UpperLevelVC.swift */; };
-		9CC2ED762CC76AD000D5E703 /* malldata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2ED752CC76AD000D5E703 /* malldata.csv */; };
+		AC004E752CCA1E6A009E9935 /* malldata.csv in Resources */ = {isa = PBXBuildFile; fileRef = AC004E742CCA1E6A009E9935 /* malldata.csv */; };
 		AC652BEC2CC0ACD7004A7F40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652BEB2CC0ACD7004A7F40 /* AppDelegate.swift */; };
 		AC652BEE2CC0ACD7004A7F40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652BED2CC0ACD7004A7F40 /* SceneDelegate.swift */; };
 		AC652BF02CC0ACD7004A7F40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652BEF2CC0ACD7004A7F40 /* ViewController.swift */; };
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		9C6566CA2CC979EA0070AEB2 /* LowerLevelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowerLevelVC.swift; sourceTree = "<group>"; };
 		9C6566D02CC97C1D0070AEB2 /* UpperLevelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperLevelVC.swift; sourceTree = "<group>"; };
-		9CC2ED752CC76AD000D5E703 /* malldata.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = malldata.csv; sourceTree = "<group>"; };
+		AC004E742CCA1E6A009E9935 /* malldata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = malldata.csv; sourceTree = "<group>"; };
 		AC652BE82CC0ACD7004A7F40 /* ShoppingSpree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingSpree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC652BEB2CC0ACD7004A7F40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC652BED2CC0ACD7004A7F40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,9 +85,9 @@
 		AC652BEA2CC0ACD7004A7F40 /* ShoppingSpree */ = {
 			isa = PBXGroup;
 			children = (
+				AC004E742CCA1E6A009E9935 /* malldata.csv */,
 				D0F1146F2CCA043A0030A668 /* StoreVC.swift */,
 				D0F1145A2CC96E510030A668 /* BookmarkedStoresViewController.swift */,
-				9CC2ED752CC76AD000D5E703 /* malldata.csv */,
 				ACAE3F812CC6FAA00092062D /* DirectoryCell.swift */,
 				AC652BEB2CC0ACD7004A7F40 /* AppDelegate.swift */,
 				AC652BED2CC0ACD7004A7F40 /* SceneDelegate.swift */,
@@ -163,9 +163,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CC2ED762CC76AD000D5E703 /* malldata.csv in Resources */,
 				AC652BFB2CC0ACD8004A7F40 /* LaunchScreen.storyboard in Resources */,
 				AC652BF82CC0ACD8004A7F40 /* Assets.xcassets in Resources */,
+				AC004E752CCA1E6A009E9935 /* malldata.csv in Resources */,
 				AC652BF32CC0ACD7004A7F40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
