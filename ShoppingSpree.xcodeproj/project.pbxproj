@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		9C6566CB2CC979EA0070AEB2 /* LowerLevelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6566CA2CC979EA0070AEB2 /* LowerLevelVC.swift */; };
 		9C6566D12CC97C1D0070AEB2 /* UpperLevelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6566D02CC97C1D0070AEB2 /* UpperLevelVC.swift */; };
+<<<<<<< HEAD
 		AC004E752CCA1E6A009E9935 /* malldata.csv in Resources */ = {isa = PBXBuildFile; fileRef = AC004E742CCA1E6A009E9935 /* malldata.csv */; };
+=======
+>>>>>>> 71b576c83a6b01f2ea22f3b9437f867b33b14aaa
 		AC652BEC2CC0ACD7004A7F40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652BEB2CC0ACD7004A7F40 /* AppDelegate.swift */; };
 		AC652BEE2CC0ACD7004A7F40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652BED2CC0ACD7004A7F40 /* SceneDelegate.swift */; };
 		AC652BF02CC0ACD7004A7F40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652BEF2CC0ACD7004A7F40 /* ViewController.swift */; };
@@ -17,8 +20,10 @@
 		AC652BF62CC0ACD7004A7F40 /* ShoppingSpree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC652BF42CC0ACD7004A7F40 /* ShoppingSpree.xcdatamodeld */; };
 		AC652BF82CC0ACD8004A7F40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC652BF72CC0ACD8004A7F40 /* Assets.xcassets */; };
 		AC652BFB2CC0ACD8004A7F40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC652BF92CC0ACD8004A7F40 /* LaunchScreen.storyboard */; };
+		AC9F01D92CCA04B600C9875A /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F01D82CCA04B600C9875A /* StoreVC.swift */; };
 		ACAE3F7A2CC578650092062D /* StoreDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE3F792CC578650092062D /* StoreDirectory.swift */; };
 		ACAE3F822CC6FAA00092062D /* DirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE3F812CC6FAA00092062D /* DirectoryCell.swift */; };
+		ACDCF4D62CCA11910092F61C /* malldata.csv in Resources */ = {isa = PBXBuildFile; fileRef = ACDCF4D52CCA11910092F61C /* malldata.csv */; };
 		D0F1145B2CC96E510030A668 /* BookmarkedStoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1145A2CC96E510030A668 /* BookmarkedStoresViewController.swift */; };
 		D0F114702CCA043A0030A668 /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1146F2CCA043A0030A668 /* StoreVC.swift */; };
 /* End PBXBuildFile section */
@@ -39,7 +44,10 @@
 /* Begin PBXFileReference section */
 		9C6566CA2CC979EA0070AEB2 /* LowerLevelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowerLevelVC.swift; sourceTree = "<group>"; };
 		9C6566D02CC97C1D0070AEB2 /* UpperLevelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperLevelVC.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		AC004E742CCA1E6A009E9935 /* malldata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = malldata.csv; sourceTree = "<group>"; };
+=======
+>>>>>>> 71b576c83a6b01f2ea22f3b9437f867b33b14aaa
 		AC652BE82CC0ACD7004A7F40 /* ShoppingSpree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingSpree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC652BEB2CC0ACD7004A7F40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC652BED2CC0ACD7004A7F40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,8 +57,10 @@
 		AC652BF72CC0ACD8004A7F40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC652BFA2CC0ACD8004A7F40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC652BFC2CC0ACD8004A7F40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC9F01D82CCA04B600C9875A /* StoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
 		ACAE3F792CC578650092062D /* StoreDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDirectory.swift; sourceTree = "<group>"; };
 		ACAE3F812CC6FAA00092062D /* DirectoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryCell.swift; sourceTree = "<group>"; };
+		ACDCF4D52CCA11910092F61C /* malldata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = malldata.csv; path = ../malldata.csv; sourceTree = "<group>"; };
 		D0F1145A2CC96E510030A668 /* BookmarkedStoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkedStoresViewController.swift; sourceTree = "<group>"; };
 		D0F1146F2CCA043A0030A668 /* StoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +79,7 @@
 		AC652BDF2CC0ACD7004A7F40 = {
 			isa = PBXGroup;
 			children = (
+				ACDCF4D52CCA11910092F61C /* malldata.csv */,
 				AC652BEA2CC0ACD7004A7F40 /* ShoppingSpree */,
 				AC652BE92CC0ACD7004A7F40 /* Products */,
 			);
@@ -94,6 +105,7 @@
 				AC652BEF2CC0ACD7004A7F40 /* ViewController.swift */,
 				AC652BF12CC0ACD7004A7F40 /* Main.storyboard */,
 				ACAE3F792CC578650092062D /* StoreDirectory.swift */,
+				AC9F01D82CCA04B600C9875A /* StoreVC.swift */,
 				AC652BF72CC0ACD8004A7F40 /* Assets.xcassets */,
 				AC652BF92CC0ACD8004A7F40 /* LaunchScreen.storyboard */,
 				AC652BFC2CC0ACD8004A7F40 /* Info.plist */,
@@ -165,7 +177,11 @@
 			files = (
 				AC652BFB2CC0ACD8004A7F40 /* LaunchScreen.storyboard in Resources */,
 				AC652BF82CC0ACD8004A7F40 /* Assets.xcassets in Resources */,
+<<<<<<< HEAD
 				AC004E752CCA1E6A009E9935 /* malldata.csv in Resources */,
+=======
+				ACDCF4D62CCA11910092F61C /* malldata.csv in Resources */,
+>>>>>>> 71b576c83a6b01f2ea22f3b9437f867b33b14aaa
 				AC652BF32CC0ACD7004A7F40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,7 +197,11 @@
 				AC652BF02CC0ACD7004A7F40 /* ViewController.swift in Sources */,
 				AC652BF62CC0ACD7004A7F40 /* ShoppingSpree.xcdatamodeld in Sources */,
 				9C6566D12CC97C1D0070AEB2 /* UpperLevelVC.swift in Sources */,
+<<<<<<< HEAD
 				D0F114702CCA043A0030A668 /* StoreVC.swift in Sources */,
+=======
+				AC9F01D92CCA04B600C9875A /* StoreVC.swift in Sources */,
+>>>>>>> origin/main
 				AC652BEC2CC0ACD7004A7F40 /* AppDelegate.swift in Sources */,
 				ACAE3F822CC6FAA00092062D /* DirectoryCell.swift in Sources */,
 				AC652BEE2CC0ACD7004A7F40 /* SceneDelegate.swift in Sources */,
