@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DpQ-qm-06E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DpQ-qm-06E">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,6 +44,7 @@
                                         <connections>
                                             <outlet property="storeImage" destination="UgK-Rc-Jk0" id="uyk-N3-n8e"/>
                                             <outlet property="storeName" destination="NS0-9w-G4E" id="Yxu-Cb-PUW"/>
+                                            <segue destination="kYF-sp-8Qn" kind="show" identifier="selectStoreSegue" id="stk-2X-1CJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -62,7 +63,7 @@
                                 <items>
                                     <barButtonItem title="Item" image="mappin.and.ellipse" catalog="system" id="4ey-fz-mL2">
                                         <connections>
-                                            <segue destination="DpQ-qm-06E" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="fEN-zW-UaO"/>
+                                            <segue destination="DpQ-qm-06E" kind="presentation" identifier="directoryToMap" animates="NO" modalPresentationStyle="fullScreen" id="fEN-zW-UaO"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="xSQ-88-v0P"/>
@@ -90,7 +91,128 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1n-i2-qEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3782" y="-650"/>
+            <point key="canvasLocation" x="3215" y="-168"/>
+        </scene>
+        <!--StoreVC-->
+        <scene sceneID="SXj-jp-yU2">
+            <objects>
+                <viewController title="StoreVC" wantsFullScreenLayout="YES" id="kYF-sp-8Qn" customClass="StoreVC" customModule="ShoppingSpree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="voy-1f-Rxg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hox-1D-rlR">
+                                <rect key="frame" x="16" y="102" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Store type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sy-8r-CYa">
+                                <rect key="frame" x="59" y="285" width="318" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(123)-456-7890" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCp-0w-9uW">
+                                <rect key="frame" x="59" y="323" width="318" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpG-Nb-89Z">
+                                <rect key="frame" x="59" y="395" width="318" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hours Hours Hours" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAQ-CN-u98">
+                                <rect key="frame" x="184" y="190" width="193" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Store Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oI7-vu-UNe">
+                                <rect key="frame" x="184" y="149" width="193" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bag.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="L9P-pY-BRs">
+                                <rect key="frame" x="16" y="281" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1tg-wA-s1U">
+                                <rect key="frame" x="16" y="319" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="12f-UH-9jj">
+                                <rect key="frame" x="16" y="357" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="globe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HsZ-X8-QhD">
+                                <rect key="frame" x="16" y="395" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location in mall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrt-a6-wjl">
+                                <rect key="frame" x="60" y="361" width="317" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ac-9i-lxf">
+                                <rect key="frame" x="0.0" y="756" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Item" image="mappin.and.ellipse" catalog="system" id="6D4-Jm-euu">
+                                        <connections>
+                                            <segue destination="DpQ-qm-06E" kind="show" id="Ets-IA-HDO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="TsE-ax-Uj4"/>
+                                    <barButtonItem title="Item" image="storefront" catalog="system" id="rtT-ua-EfX">
+                                        <connections>
+                                            <segue destination="G6L-F1-YvE" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="3Zy-mz-hcL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WEn-G4-3QX"/>
+                                    <barButtonItem title="Item" image="bookmark" catalog="system" id="l2j-dK-Zy7">
+                                        <connections>
+                                            <segue destination="pTQ-7D-197" kind="presentation" identifier="storeToBookmarks" modalPresentationStyle="fullScreen" id="UF2-xJ-aIq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6dE-9U-I2v"/>
+                                    <barButtonItem title="Item" image="bubble.left.and.text.bubble.right" catalog="system" id="aRj-VG-8CI"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6IW-Wf-QIs"/>
+                                    <barButtonItem title="Item" image="gearshape" catalog="system" id="r20-hi-hX3"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r6b-dS-T37"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dcf-QL-Ogo"/>
+                    <connections>
+                        <outlet property="hoursLabel" destination="JAQ-CN-u98" id="Cbe-f7-TiN"/>
+                        <outlet property="storeImageItem" destination="hox-1D-rlR" id="CaN-4E-gQR"/>
+                        <outlet property="storeLocationLabel" destination="Jrt-a6-wjl" id="iVM-Rp-CY8"/>
+                        <outlet property="storeNameLabel" destination="oI7-vu-UNe" id="P1o-KO-5x8"/>
+                        <outlet property="storeNumberLabel" destination="qCp-0w-9uW" id="cLj-fd-Bbo"/>
+                        <outlet property="storeTypeImage" destination="L9P-pY-BRs" id="sK5-YR-D1N"/>
+                        <outlet property="storeTypeLabel" destination="4sy-8r-CYa" id="66E-ZQ-y5i"/>
+                        <outlet property="storeWebsiteLabel" destination="fpG-Nb-89Z" id="raw-IW-9M6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9pe-LM-2E6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4015" y="-557"/>
         </scene>
         <!--Bookmarked Stores View Controller-->
         <scene sceneID="iPJ-fG-KxU">
@@ -156,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bys-f3-YpI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4896.9465648854957" y="-663.38028169014092"/>
+            <point key="canvasLocation" x="3917" y="214"/>
         </scene>
         <!--MapVC-->
         <scene sceneID="1ty-dX-9GZ">
@@ -180,7 +302,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ygD-kd-Hbh"/>
                                     <barButtonItem title="Item" image="bookmark" catalog="system" id="5An-Ke-fYP">
                                         <connections>
-                                            <segue destination="pTQ-7D-197" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="qfD-bi-LXf"/>
+                                            <segue destination="pTQ-7D-197" kind="presentation" identifier="directoryToBookmarks" animates="NO" modalPresentationStyle="fullScreen" id="qfD-bi-LXf"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="lMU-kf-5uT"/>
@@ -262,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhb-W7-ok4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3539.6946564885493" y="98.591549295774655"/>
+            <point key="canvasLocation" x="2450" y="-544"/>
         </scene>
         <!--Upper level-->
         <scene sceneID="yMN-ab-Aua">
@@ -368,21 +490,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ili-JZ-7M5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4450" y="99"/>
+            <point key="canvasLocation" x="2034" y="196"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="stk-2X-1CJ"/>
         <segue reference="Hb2-pd-a83"/>
-        <segue reference="ZEB-FD-gFY"/>
-        <segue reference="4IF-mu-Mdp"/>
-        <segue reference="a3e-RI-z2Y"/>
+        <segue reference="fEN-zW-UaO"/>
+        <segue reference="UF2-xJ-aIq"/>
+        <segue reference="3Zy-mz-hcL"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="bag.fill" catalog="system" width="128" height="128"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="bubble.left.and.text.bubble.right" catalog="system" width="128" height="96"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="globe" catalog="system" width="128" height="123"/>
         <image name="lowerfloor" width="750" height="1334"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="mappin.and.ellipse" catalog="system" width="110" height="128"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="storefront" catalog="system" width="128" height="111"/>
         <image name="upperfloor" width="750" height="1334"/>
         <systemColor name="systemBackgroundColor">
