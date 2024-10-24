@@ -70,6 +70,19 @@ class StoreDirectory: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
             }.resume()
         }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            // Get the new view controller using segue.destination.
+//            // Pass the selected object to the new view controller.
+//            if segue.identifier == "selectStoreSegue",
+//                let nextVC = segue.destination as? StoreVC,
+//                let cell = sender as? UITableViewCell,
+//                let indexPath = tableView.indexPath(for: cell) {
+//                    let currentStore = stores[indexPath.row]
+//                    nextVC.thisStore = currentStore
+//                    nextVC.delegate = self
+//            }
+//        }
 
 
 }

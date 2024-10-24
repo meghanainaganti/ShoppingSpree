@@ -17,6 +17,7 @@
 		AC652BF62CC0ACD7004A7F40 /* ShoppingSpree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC652BF42CC0ACD7004A7F40 /* ShoppingSpree.xcdatamodeld */; };
 		AC652BF82CC0ACD8004A7F40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC652BF72CC0ACD8004A7F40 /* Assets.xcassets */; };
 		AC652BFB2CC0ACD8004A7F40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC652BF92CC0ACD8004A7F40 /* LaunchScreen.storyboard */; };
+		AC9F01D92CCA04B600C9875A /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F01D82CCA04B600C9875A /* StoreVC.swift */; };
 		ACAE3F7A2CC578650092062D /* StoreDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE3F792CC578650092062D /* StoreDirectory.swift */; };
 		ACAE3F822CC6FAA00092062D /* DirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE3F812CC6FAA00092062D /* DirectoryCell.swift */; };
 		D0F1145B2CC96E510030A668 /* BookmarkedStoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1145A2CC96E510030A668 /* BookmarkedStoresViewController.swift */; };
@@ -48,6 +49,7 @@
 		AC652BF72CC0ACD8004A7F40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC652BFA2CC0ACD8004A7F40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC652BFC2CC0ACD8004A7F40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC9F01D82CCA04B600C9875A /* StoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
 		ACAE3F792CC578650092062D /* StoreDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDirectory.swift; sourceTree = "<group>"; };
 		ACAE3F812CC6FAA00092062D /* DirectoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryCell.swift; sourceTree = "<group>"; };
 		D0F1145A2CC96E510030A668 /* BookmarkedStoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkedStoresViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				AC652BEF2CC0ACD7004A7F40 /* ViewController.swift */,
 				AC652BF12CC0ACD7004A7F40 /* Main.storyboard */,
 				ACAE3F792CC578650092062D /* StoreDirectory.swift */,
+				AC9F01D82CCA04B600C9875A /* StoreVC.swift */,
 				AC652BF72CC0ACD8004A7F40 /* Assets.xcassets */,
 				AC652BF92CC0ACD8004A7F40 /* LaunchScreen.storyboard */,
 				AC652BFC2CC0ACD8004A7F40 /* Info.plist */,
@@ -178,6 +181,7 @@
 				AC652BF02CC0ACD7004A7F40 /* ViewController.swift in Sources */,
 				AC652BF62CC0ACD7004A7F40 /* ShoppingSpree.xcdatamodeld in Sources */,
 				9C6566D12CC97C1D0070AEB2 /* UpperLevelVC.swift in Sources */,
+				AC9F01D92CCA04B600C9875A /* StoreVC.swift in Sources */,
 				AC652BEC2CC0ACD7004A7F40 /* AppDelegate.swift in Sources */,
 				ACAE3F822CC6FAA00092062D /* DirectoryCell.swift in Sources */,
 				AC652BEE2CC0ACD7004A7F40 /* SceneDelegate.swift in Sources */,
