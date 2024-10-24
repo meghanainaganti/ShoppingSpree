@@ -11,13 +11,7 @@ class StoreVC: UIViewController {
     
     @IBOutlet weak var storeImageItem: UIImageView!
     @IBOutlet weak var hoursLabel: UILabel!
-    @IBOutlet weak var storeNameLabel: UILabel! {
-        didSet {
-            if storeNameLabel == nil {
-                print("label set to nil!")
-            }
-        }
-    }
+    @IBOutlet weak var storeNameLabel: UILabel!
     
     @IBOutlet weak var storeTypeImage: UIImageView!
     @IBOutlet weak var storeTypeLabel: UILabel!
@@ -27,30 +21,36 @@ class StoreVC: UIViewController {
     
     var thisStore: StoreModel!
     
-    var storeImage: UIImage!
-    var storeName: String!
-    var storeHours: String!
-    var storeType: String!
-    var storeNumber: String!
-    var storeLocation: String!
-    var storeWebsite: String!
     weak var delegate: UIViewController! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        storeNameLabel.text = storeName
-        print("view did load: \(storeName)")
-        if let text = storeName {
-            // storeNameLabel.text = text
-            //            hoursLabel.text = storeHours
-            //            storeImageItem.image = storeImage
-            //            storeTypeLabel.text = storeType
-            //            storeNumberLabel.text = storeNumber
-            //            storeLocationLabel.text = storeLocation
-            //            storeWebsiteLabel.text = storeWebsite
-            
+        storeNameLabel.text = thisStore.name
+        hoursLabel.text = thisStore.hours
+//            storeImageItem.image = storeImage
+        storeTypeLabel.text = thisStore.storetype
+        storeNumberLabel.text = thisStore.phonenumber
+        storeLocationLabel.text = thisStore.location
+        storeWebsiteLabel.text = thisStore.website
+        
+//        if let imageUrl = URL(string: thisStore.image!) {
+//            downloadImage(from: imageUrl) { imageS in
+//                    DispatchQueue.main.async {
+//                        self?.storeImageItem.image = imageS
+//                }
+//            }
+//        }
+//        
+        if let imageUrlString = thisStore.image,
+                   let imageUrl = URL(string: imageUrlString) {
+                    downloadImage(from: imageUrl) { [weak self] image in
+                        DispatchQueue.main.async {
+                            self?.storeImageItem.image = image // Set the image to the UIImageView
+                        }
+                    }
+        }
             
             //    if (storeType == "Store") {                     imageForStores.isHidden = false
             //          imageForRestaurants.isHidden = true
@@ -59,9 +59,19 @@ class StoreVC: UIViewController {
             //          imageForStores.isHidden = true
         // }
         }
-        print("view did load on store vc")
+    
+    func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+              URLSession.shared.dataTask(with: url) { data, response, error in
+                  if let data = data, let image = UIImage(data: data) {
+                      completion(image)
+                  } else {
+                      completion(nil) // Handle failure
+                  }
+              }.resume()
+          }
     }
     
+
     /*
     // MARK: - Navigation
 
@@ -72,4 +82,4 @@ class StoreVC: UIViewController {
     }
     */
 
-}
+

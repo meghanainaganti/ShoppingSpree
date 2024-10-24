@@ -58,7 +58,6 @@ class StoreDirectory: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "selectStoreSegue", sender: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -76,19 +75,15 @@ class StoreDirectory: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "selectStoreSegue" {
-            if let indexPath = sender as? IndexPath {
-                let nextVC = segue.destination as! StoreVC
-                print("still in segue func")
-                nextVC.thisStore = stores[indexPath.row]
+        if segue.identifier == "selectStoreSegue",
+            let nextVC = segue.destination as? StoreVC,
+            let cell = sender as? UITableViewCell,
+            let indexPath = tableView.indexPath(for: cell) {
                 let currentStore = stores[indexPath.row]
-                print("current store is \(currentStore.name!)")
-                nextVC.storeName = currentStore.name
-                print("in segue fun store is \(nextVC.storeName!)")
+                nextVC.thisStore = currentStore
                 nextVC.delegate = self
-                //nextVC.storeNameLabel.text = currentStore.name //how is the label nil
-                }
-            }
+        }
     }
+    
 
 }
