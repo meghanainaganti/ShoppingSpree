@@ -20,6 +20,7 @@
 		ACAE3F7A2CC578650092062D /* StoreDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE3F792CC578650092062D /* StoreDirectory.swift */; };
 		ACAE3F822CC6FAA00092062D /* DirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE3F812CC6FAA00092062D /* DirectoryCell.swift */; };
 		D0F1145B2CC96E510030A668 /* BookmarkedStoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1145A2CC96E510030A668 /* BookmarkedStoresViewController.swift */; };
+		D0F114702CCA043A0030A668 /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F1146F2CCA043A0030A668 /* StoreVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +52,7 @@
 		ACAE3F792CC578650092062D /* StoreDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDirectory.swift; sourceTree = "<group>"; };
 		ACAE3F812CC6FAA00092062D /* DirectoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryCell.swift; sourceTree = "<group>"; };
 		D0F1145A2CC96E510030A668 /* BookmarkedStoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkedStoresViewController.swift; sourceTree = "<group>"; };
+		D0F1146F2CCA043A0030A668 /* StoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		AC652BEA2CC0ACD7004A7F40 /* ShoppingSpree */ = {
 			isa = PBXGroup;
 			children = (
+				D0F1146F2CCA043A0030A668 /* StoreVC.swift */,
 				D0F1145A2CC96E510030A668 /* BookmarkedStoresViewController.swift */,
 				9CC2ED752CC76AD000D5E703 /* malldata.csv */,
 				ACAE3F812CC6FAA00092062D /* DirectoryCell.swift */,
@@ -178,6 +181,7 @@
 				AC652BF02CC0ACD7004A7F40 /* ViewController.swift in Sources */,
 				AC652BF62CC0ACD7004A7F40 /* ShoppingSpree.xcdatamodeld in Sources */,
 				9C6566D12CC97C1D0070AEB2 /* UpperLevelVC.swift in Sources */,
+				D0F114702CCA043A0030A668 /* StoreVC.swift in Sources */,
 				AC652BEC2CC0ACD7004A7F40 /* AppDelegate.swift in Sources */,
 				ACAE3F822CC6FAA00092062D /* DirectoryCell.swift in Sources */,
 				AC652BEE2CC0ACD7004A7F40 /* SceneDelegate.swift in Sources */,
